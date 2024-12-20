@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import Button from "./buttons/buttons"
+import Button from "./buttons/button"
 import {AddRounded,ExploreRounded } from "@mui/icons-material";
 import {useNavigate,useLocation} from "react-router-dom"
 const Container = styled.div`

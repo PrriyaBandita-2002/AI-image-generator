@@ -1,10 +1,10 @@
 
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme} from "./utils/theme";
+import { darkTheme, lightTheme } from "./utils/Theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/home";
-import CreatePost from "./pages/createPost";
+import Home from "./pages/Home";
+import CreatePost from "./pages/CreatePost";
 
 const Container = styled.div`
   width: 100%;
@@ -25,16 +25,17 @@ const Wrapper = styled.div`
   justify-content: space-between;
   flex: 3;
 `;
+
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Container>
         <Wrapper>
           <BrowserRouter>
-            <Navbar/>
+            <Navbar />
             <Routes>
-              <Route path="/"  element={<Home />} />
-              <Route path="/post"  element={<CreatePost />} />
+              <Route path="/" exact element={<Home />} />
+              <Route path="/post" exact element={<CreatePost />} />
             </Routes>
           </BrowserRouter>
         </Wrapper>
